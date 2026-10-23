@@ -1,0 +1,35 @@
+/* saira-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/saira-v23-latin-regular.woff2') format('woff2');
+}
+
+/* saira-italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Saira';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../assets/fonts/saira-v23-latin-italic.woff2') format('woff2');
+}
+
+/* saira-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/saira-v23-latin-500.woff2') format('woff2');
+}
+
+/* saira-900 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../assets/fonts/saira-v23-latin-900.woff2') format('woff2');
+}

@@ -1,0 +1,53 @@
+:root {
+  --main-black: rgb(30, 30, 30);
+  --main-white: rgb(240, 240, 240);
+  --main-accent: rgb(210, 120, 60);
+
+  --text-black: rgb(45, 45, 45);
+  --text-gray: rgb(120, 120, 120);
+  --text-white: rgb(230, 230, 230);
+
+  --animation-time: 0.135s;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--main-black);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: var(--text-black);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-black);
+  margin: 0 0.3em;
+  transition: opacity var(--animation-time); 
+}
+
+a:hover {
+  color: var(--main-accent);
+  opacity: 0.75;
+}
+
+button {
+  border: 3px solid var(--main-accent);
+  border-radius: 0.5em;
+  padding: 0.5em, 0.75em;
+  background-color: var(--main-white);
+  cursor: pointer;
+  transition: background-color var(--animation-time), opacity var(--animation-time);
+}
+
+button:hover {
+  background-color: var(--main-accent);
+  opacity: 0.75;
+}
+
+button:focus {
+  outline: none;
+}
+
