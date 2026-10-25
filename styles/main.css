@@ -1,6 +1,6 @@
 :root {
   --main-black: rgb(30, 30, 30);
-  --main-white: rgb(240, 240, 240);
+  --main-white: rgb(225, 215, 225);
   --main-accent: rgb(210, 120, 60);
 
   --text-black: rgb(45, 45, 45);
@@ -8,12 +8,24 @@
   --text-white: rgb(230, 230, 230);
 
   --animation-time: 0.135s;
+
+  --border-radius: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   padding: 0;
   margin: 0;
   background-color: var(--main-black);
+  background-image:
+    radial-gradient(ellipse at bottom left, rgb(210 120 60 / 16%), transparent 60%),
+    linear-gradient(to right, var(--main-black), rgb(42 34 30) 50%, var(--main-black));
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,7 +36,7 @@ p {
 a {
   text-decoration: none;
   color: var(--text-black);
-  margin: 0 0.3em;
+  margin: 0 0.3rem;
   transition: opacity var(--animation-time); 
 }
 
@@ -34,9 +46,12 @@ a:hover {
 }
 
 button {
+  font-family: inherit;
+  color: inherit;
   border: 3px solid var(--main-accent);
-  border-radius: 0.5em;
-  padding: 0.5em, 0.75em;
+  border-radius: 0.5rem;
+  padding:  0.5rem 0.75rem;
+  margin: 0;
   background-color: var(--main-white);
   cursor: pointer;
   transition: background-color var(--animation-time), opacity var(--animation-time);
@@ -50,4 +65,3 @@ button:hover {
 button:focus {
   outline: none;
 }
-
