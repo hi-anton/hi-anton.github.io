@@ -23,10 +23,37 @@ body {
   margin: 0;
   background-color: var(--main-black);
   background-image:
-    radial-gradient(ellipse at bottom left, rgb(210 120 60 / 16%), transparent 60%),
-    linear-gradient(to right, var(--main-black), rgb(42 34 30) 50%, var(--main-black));
+    radial-gradient(ellipse at bottom left, rgb(210 120 60 / 16%), transparent 70%),
+    radial-gradient(ellipse at top right, rgb(210 120 60 / 16%), transparent 40%);
+  background-size: 150% 150%, 150% 150%;
   background-attachment: fixed;
+  animation: move-background-ellipses 32s ease-in-out infinite;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes move-background-ellipses {
+  0%,
+  100% {
+    background-position: 0% 100%, 100% 0%;
+  }
+
+  25% {
+    background-position: 100% 100%, 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 0%, 0% 100%;
+  }
+
+  75% {
+    background-position: 0% 0%, 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
 }
 
 p {
@@ -34,8 +61,8 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: var(--text-black);
+  text-decoration: none;
   margin: 0 0.3rem;
   transition: opacity var(--animation-time); 
 }

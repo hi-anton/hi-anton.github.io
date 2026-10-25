@@ -16,3 +16,18 @@ header div {
   padding: 1rem 3rem;
 }
 
+header img {
+  width: 1rem;
+  display: none;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .middle-section nav {
+    display: none;
+  }
+
+  .middle-section img {
+    display: inline-block;
+  }
+}
