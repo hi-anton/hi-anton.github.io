@@ -16,9 +16,16 @@ header div {
   padding: 1rem 3rem;
 }
 
-header img {
+.middle-section img {
   width: 1rem;
+  margin: 0;
+}
+
+.middle-section button {
   display: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
   margin: 0;
 }
 
@@ -27,7 +34,14 @@ header img {
     display: none;
   }
 
-  .middle-section img {
+  .middle-section img,
+  .middle-section button {
     display: inline-block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .middle-section {
+    transition: none;
   }
 }
