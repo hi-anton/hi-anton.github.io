@@ -9,7 +9,7 @@ header {
   padding: 1rem;
 }
 
-header div {
+header > div {
   background-color: var(--main-white);
   border-bottom: 3px solid var(--main-accent);
   border-radius: var(--border-radius);
@@ -30,6 +30,22 @@ header div {
 }
 
 @media (max-width: 600px) {
+  header {
+    background-color: var(--main-white);
+    border-bottom: 3px solid var(--main-accent);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: 1rem;
+    justify-content: space-evenly;
+  }
+
+  header > div {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
   .middle-section nav {
     display: none;
   }
