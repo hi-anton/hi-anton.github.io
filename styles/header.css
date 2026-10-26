@@ -1,12 +1,30 @@
 header {
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   left: 0;
+  isolation: isolate;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+}
+
+header::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: -4rem;
+  left: 0;
+  background-color: rgb(30 30 30 / 20%);
+  content: "";
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgb(0 0 0 / 85%) 35%, rgb(0 0 0 / 45%) 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgb(0 0 0 / 85%) 35%, rgb(0 0 0 / 45%) 65%, transparent 100%);
 }
 
 header > div {
@@ -42,6 +60,10 @@ header > div {
     padding: 1rem;
     margin: 1rem;
     justify-content: space-evenly;
+  }
+
+  header::before {
+    display: none;
   }
 
   header > div {
