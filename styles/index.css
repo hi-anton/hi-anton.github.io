@@ -1,4 +1,4 @@
-@import './main.css';
-@import './fonts.css';
-@import './header.css';
-@import './sections/heading.css';
+@import './main.css?v=2';
+@import './fonts.css?v=2';
+@import './header.css?v=2';
+@import './sections/heading.css?v=2';
