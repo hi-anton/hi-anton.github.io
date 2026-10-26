@@ -1,7 +1,6 @@
 .hero {
   display: flex;
   height: 100vh;
-  width: 100vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -21,6 +20,30 @@
   display: none;
 }
 
+.typewriter {
+  color: var(--main-accent);
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 0.15em;
+  height: 0.9em;
+  margin-left: 0.04em;
+  vertical-align: -0.05em;
+  background-color: var(--main-accent);
+  animation: blink-cursor 1s steps(1) infinite;
+}
+
+.typewriter.is-typing .typewriter-cursor {
+  animation: none;
+}
+
+@keyframes blink-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
 .hero p {
   color: var(--text-gray);
   font-size: clamp(0.85rem, 1.25vw, 1.35rem);
@@ -33,5 +56,11 @@
 
   .mobile-break {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-cursor {
+    animation: none;
   }
 }

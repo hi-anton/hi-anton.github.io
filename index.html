@@ -7,21 +7,23 @@
   <title>My portfolio</title>
 
   <link rel="stylesheet" href="./styles/index.css" />
+  <script src="./scripts/typewriter.js" defer></script>
 </head>
 
 <body>
   <header>
       <div class="left-section">
-        <p>fb.</p>
+        <a href="#hero">fb.</a>
         <!-- <img src="./assets/" alt="fb." /> -->
       </div>
 
       <div class="middle-section">
         <nav>
-          <a href="#">Link</a>
-          <a href="#">Link</a>
-          <a href="#">Link</a>
-          <a href="#">Link</a>
+          <a href="#anchor1">Link</a>
+          <a href="#anchor2">Link</a>
+          <a href="#anchor3">Link</a>
+          <a href="#anchor4">Link</a>
+          <a href="#anchor5">Link</a>
         </nav>
         <button>
           <img src="./assets/imgs/hamburger-menu-svgrepo-com.svg" alt="">
@@ -33,15 +35,34 @@
       </div>
   </header>
 
-  <section class="hero">
-    <h1>
+  <section class="hero" id="hero">
+    <h1 aria-label="Frontend development revisioned.">
       Frontend<br class="mobile-break" /> development <br />
-      <span style="color: var(--main-accent);">
-        revisioned.
-      </span>
+      <span class="typewriter" aria-hidden="true">re<span class="typewriter-word">visioned</span><span class="typewriter-cursor"></span></span>
     </h1>
-    <p>Building Apps and Websites since August 2025.</p>
+    <p>The software world seen through the eyes of a 14-year old.</p>
   </section>
+
+  <section class="section1" id="anchor1">
+
+  </section>
+  
+  <section class="section2" id="anchor2">
+
+  </section>
+  
+  <section class="section3" id="anchor3">
+
+  </section>
+  
+  <section class="section4" id="anchor4">
+
+  </section>
+  
+  <section class="section5" id="anchor5">
+
+  </section>
+  
 </body>
 
 </html>

@@ -19,6 +19,7 @@ header > div {
 .middle-section img {
   width: 1rem;
   margin: 0;
+  transition: filter var(--animation-time);
 }
 
 .middle-section button {
@@ -29,7 +30,11 @@ header > div {
   margin: 0;
 }
 
-@media (max-width: 600px) {
+.middle-section button:hover img {
+  filter: invert(53%) sepia(61%) saturate(710%) hue-rotate(337deg) brightness(88%) contrast(87%);
+}
+
+@media (max-width: 650px) {
   header {
     background-color: var(--main-white);
     border-bottom: 3px solid var(--main-accent);
@@ -57,7 +62,7 @@ header > div {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .middle-section {
+  .middle-section img {
     transition: none;
   }
 }
