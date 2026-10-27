@@ -12,5 +12,10 @@ function getTime(timeZone) {
   });
 }
 
-userTimeHTML.innerText = getTime(userTimezone);
-myTimeHTML.innerText = getTime(myTimezone);
+function updateTimes() {
+  userTimeHTML.innerText = getTime(userTimezone);
+  myTimeHTML.innerText = getTime(myTimezone);
+}
+
+updateTimes();
+setInterval(updateTimes, 30000);
